@@ -1,0 +1,53 @@
+<!-- <p>
+  pipe1 works!
+</p> -->
+<table>
+  <tr>
+<th>fname:
+<input type="text" [(ngModel)]="name1"/><br>
+<p style="color:firebrick;">{{nameError}}</p>
+</th><br>
+ <th>lname:
+<input type="text" [(ngModel)]="name"/><br>
+{{nameError}}<br>
+</th><br>
+ <th> DOB:
+<input type="date" [(ngModel)]="email"/><br>
+{{dobError}}<br>
+</th><br>
+<th>
+Email Id: 
+<input type="text" [(ngModel)]="dob"/><br>
+{{emailError}}<br>
+</th><br>
+<th>
+Age:
+<input type="text" [(ngModel)]="age"/><br>
+{{ageError}}<br>
+</th><br>
+<button class="btn btn-success" (click)="add()">Add</button>
+</tr>
+</table>
+<table class="table" >
+  <tr>
+      <th>Id</th>
+    <th> Name</th>
+    <!-- <th>Last Name</th> -->
+    <th>DOB</th>
+    <th>Email Id</th>
+     <th>Age</th>
+  </tr>
+  <tr *ngFor="let x of person1;let i=index">
+      <!-- <td>{{x.name1|slice:0:1}}{{x.name|slice:0:1}}{{i+1}}</td> -->
+      <td>{{i+1}}</td>
+    <!-- <td>{{x.name}}</td> -->
+    <td>{{x.name1|capital}} {{" "}}{{x.name|capital}}</td>
+    <!-- <td>{{x.lname|uppercase}}</td>
+    <!-- <td>{{x.salary|currency}}</td> -->
+    <td>{{x.dob}}</td>
+    <td>{{x.email}}</td>
+    <!-- <td>{{x.percentage|percent}}</td>
+    <td>{{x.salary|salaryCalculator:12}}</td> -->
+    <td>{{x.age}}</td>
+    </tr>
+  </table>
