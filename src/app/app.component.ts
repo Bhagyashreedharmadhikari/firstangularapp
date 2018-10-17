@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AccountsService } from './accounts.service';
-import { EmpService } from './emp.service';
+// import { AccountsService } from './accounts.service';
+// import { EmpService } from './emp.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +9,14 @@ import { EmpService } from './emp.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  accounts: {name: string, status: string}[] = [];
-  emp1=[];
+  // accounts: {name: string, status: string}[] = [];
+  // emp1=[];
 
-  constructor(private accountsService: AccountsService,private EmpService:EmpService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.accounts = this.accountsService.accounts;
-    this.emp1 =this.EmpService.getemp();
+    // this.accounts = this.accountsService.accounts;
+    // this.emp1 =this.EmpService.getemp();
 
   }
 }
